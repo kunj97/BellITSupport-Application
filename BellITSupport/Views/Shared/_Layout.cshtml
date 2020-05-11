@@ -18,27 +18,23 @@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
-            <form action="/submit_page.php">
-                <label for="ProjectName">Project Name: </label>
+            <form action="/submit_page.html" method="post">
+                <label for="ProjectName">Project Name/Nom du Projet: </label>
                 <input type="text" id="ProjectName" name="ProjectName" required><br><br>
 
-                <label for="DepartmentName">Department name: </label>
+                <label for="DepartmentName">Department name/Nom du département: </label>
                 <input type="text" id="DepartmentName" name="DepartmentName" required><br><br>
 
-                <label for="FirstName">First name: </label>
-                <select id="FirstName" name="FirstName" required>
-                    <option value="First Name">First Name</option>
-                </select><br><br>
+                <label for="FirstName">First name/Prénom: </label>
+                <input type="text" id="FirstName" name="FirstName" required><br><br>
 
-                <label for="LastName">Last name: </label>
-                <select id="LastName" name="LastName" required>
-                    <option value="Last Name">Last Name</option>
-                </select><br><br>
+                <label for="LastName">Last name/Nom de famille: </label>
+                <input type="text" id="LastName" name="LastName" required><br><br>
+                
+                <label for="DOP">Description of Problem/Description du problème: </label> <br><br>
+                <textarea style="resize:none" id="DOP" rows="5" cols="50" required></textarea><br><br>
 
-                <label for="DOP">Description of Problem: </label> <br><br>
-                <textarea style="resize:none" id="DOP" rows="5" cols="50" required> Brief Description of Problem </textarea> <br> <br>
-
-                <input type="submit" value="Submit"><br>
+                <input type="submit" value="Submit/Soumettre"><br>
                 <p>All field must be completed before Submitting</p>
             </form>
         </main>
