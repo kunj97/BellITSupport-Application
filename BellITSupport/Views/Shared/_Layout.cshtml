@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Bell IT Support</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bell IT Support</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+            <form action="/submit_page.php">
+                <label for="ProjectName">Project Name: </label>
+                <input type="text" id="ProjectName" name="ProjectName" required><br><br>
+
+                <label for="DepartmentName">Department name: </label>
+                <input type="text" id="DepartmentName" name="DepartmentName" required><br><br>
+
+                <label for="FirstName">First name: </label>
+                <select id="FirstName" name="FirstName" required>
+                    <option value="First Name">First Name</option>
+                </select><br><br>
+
+                <label for="LastName">Last name: </label>
+                <select id="LastName" name="LastName" required>
+                    <option value="Last Name">Last Name</option>
+                </select><br><br>
+
+                <label for="DOP">Description of Problem: </label> <br><br>
+                <textarea style="resize:none" id="DOP" rows="5" cols="50" required> Brief Description of Problem </textarea> <br> <br>
+
+                <input type="submit" value="Submit"><br>
+                <p>All field must be completed before Submitting</p>
+            </form>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - BellITSupport - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
